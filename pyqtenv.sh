@@ -6,7 +6,7 @@ DEST=${DEST_DIR:-`pwd`}
 
 # Getting dependencies
 sudo apt-get update
-sudo apt-get install -y libqt4-dev build-essential wget unzip python-virtualenv --force-yes
+sudo apt-get install -y sudo libqt4-dev build-essential wget unzip python-virtualenv --force-yes
 
 # Creating directory if it doesn't exists
 if [ ! -d $DEST ]; then
@@ -44,5 +44,5 @@ cd ../PyQt-x11-gpl-4.8.6/
 # $export LICENSE=--confirm-license
 python configure.py --bindir ../.pyqt-venv/bin/ --destdir ../.pyqt-venv/lib/python2.7/site-packages/ --no-designer-plugin --sipdir ../.pyqt-venv/usr/share/sip/PyQt4 --no-qsci-api $CONFIRM
 make
-make install
+sudo make install
 
